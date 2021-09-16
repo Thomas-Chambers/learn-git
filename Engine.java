@@ -59,12 +59,20 @@ public class Engine {
   // Return true if the board is full
   // Return false if not
   public boolean checkTie() {
+<<<<<<< HEAD
     for(int i = 0; i <BOARD_SIZE; i++){
       for(int j = 0; j < BOARD_SIZE; j++){
         int f = 0;
         if(symbols[0].equals(board[i][j])) f =1;
         if(symbols[1].equals(board[i][j])) f =1;
         if(f!= 1) return false;
+=======
+    for (int row = 0; row < BOARD_SIZE; row++) {
+      for(int col = 0; col < BOARD_SIZE; col++) {
+        if (this.board[row][col] == " ") {
+          return false;
+        }
+>>>>>>> check-tie
       }
     }
     return true;
