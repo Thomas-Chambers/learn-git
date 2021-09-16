@@ -52,13 +52,21 @@ public class Engine {
   // TODO: Complete this method
   // Player is either 0 or 1, row and column are valid and empty
   public void playerTurn(int player, int row, int col) {
-    return;
+    board[row][col] = symbols[player];
   }
 
   // TODO: Complete this method
   // Return true if the board is full
   // Return false if not
   public boolean checkTie() {
+    for(int i = 0; i <BOARD_SIZE; i++){
+      for(int j = 0; j < BOARD_SIZE; j++){
+        int f = 0;
+        if(symbols[0].equals(board[i][j])) f =1;
+        if(symbols[1].equals(board[i][j])) f =1;
+        if(f!= 1) return false;
+      }
+    }
     return true;
   }
 
